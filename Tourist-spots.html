@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camiguin Travel Guide</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script></head>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="general.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      color: white;
+      font-size: 25px;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: rgb(240, 240, 240);
+    }
+
+    p, span{
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      width: 650px;
+      font-size: 20px;
+      font-weight: 500;
+      color: black;
+    }
+
+    div.header {
+      max-width: 100%;
+      height: 700px;
+      background-color: rgba(0, 0, 0, 0.060);
+      opacity: 100%;
+    }
+    
+    .web-page {
+      background-image: url(images/bg2.jpg);
+      background-repeat: no-repeat;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    nav {
+      margin-top: 150px;
+    }
+
+    .container-fluid {
+      text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.667);
+    }
+
+    .navbar, .navbar:hover {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 70px;
+      font-family: fantasy;
+      font-size: 110px;
+    }
+
+    .header1, .header2 {
+      text-shadow: black 0px 0px 10px;
+    }
+
+    .destination {
+      display: flex;
+      width: 100%;
+      margin: 0px 20px 30px;
+      background-color: rgb(248, 248, 242);
+      border-radius: 10px;
+    }
+
+    .destination-2 {
+      display: flex;
+      width: 100%;
+      margin: 0px 20px 30px;
+      background-color: rgb(248, 248, 242);
+      border-radius: 10px;
+      justify-content: end;
+    }
+
+    .destination p{
+      width: 900px;
+      text-align: justify;
+      margin-left: 20px;
+    }
+
+    .destination-2 p{
+      width: 900px;
+      text-align: justify;
+      margin-right: 20px;
+    }
+
+    a {
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-size: 20px;
+      font-weight: 100%;
+      color: rgb(117, 189, 189);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: rgb(117, 189, 189);
+      text-decoration: underline;
+    }
+
+    [class*=nav-] {
+      color: rgba(255, 255, 255, 0.667);
+      transition: 0.15s;
+      font-size: 15px;
+    }
+
+    [class*=nav-]:hover {
+      color: white;
+      text-decoration: underline;
+    }
+
+    .img-header1 {
+      margin-top: 50px;
+      color: black;
+      font-size: 30px;
+      text-align:  left;
+      margin-left: 30px;
+    }
+
+    .img-header2 {
+      margin-top: 50px;
+      color: black;
+      font-size: 30px;
+      text-align: right;
+      margin-right: 20px;
+    }
+
+    img {
+      width: 800px;
+      height: 500px;
+      object-fit: cover;
+    }
+
+    .image {
+      max-width: 800px;
+      height: 500px;
+    }
+
+    .web-footer {
+      margin-top: 80px;
+      padding-top: 20px;
+      height: 100px;
+      background-color: rgb(12 17 21);
+    }
+
+    .footer > .footer-text {
+      margin: 5px;
+      width: auto;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.381);
+    }
+
+    button {
+      border: none;
+    }
+
+    .navbar-toggler-icon {
+      color: #dddddd;
+      background-image: url(icon/menu2.png);
+      width: 2em;
+      height: 2em;
+      border: none;
+    }
+
+    .offcanvas {
+      background-color: #2222224f;
+    }
+
+    .navbar, .navbar:hover {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+
+    .scroll-down {
+      width: 100%;
+    }
+
+    @media only screen and  (max-width: 1200px) {
+      p, span{
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        width: 100%;
+        font-size: 16px;
+        font-weight: 500;
+        color: black;
+      }
+
+      div.header {
+      width: 100%;
+      height: 500px;
+      background-color: rgba(0, 0, 0, 0.060);
+      opacity: 100%;
+    }
+
+    nav {
+      margin-top: 130px;
+    }
+
+     h1 {
+        text-align: center;
+        margin-top: 40px;
+        font-family: fantasy;
+        font-size: 80px;
+      }
+
+      .web-page {
+        background-image: url(images/bg2.jpg);
+        background-repeat: no-repeat;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .img-header1 {
+        margin-top: 50px;
+        color: black;
+        font-size: 20px;
+        text-align:  left;
+        margin-left: 30px;
+      }
+
+    .img-header2 {
+      margin-top: 50px;
+      color: black;
+      font-size: 20px;
+      text-align: right;
+      margin-right: 20px;
+    }
+
+      .destination p{
+        width: 90%;
+        text-align: justify;
+      }
+
+      .destination-2 p{
+        width: 90%;
+        text-align: justify;
+      }
+
+      a {
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 16px;
+        font-weight: 100%;
+        color: rgb(117, 189, 189);
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: rgb(117, 189, 189);
+        text-decoration: underline;
+      }
+
+      .image img{
+        width: 100%;
+        height: 440px;
+        object-fit: cover;
+      }
+    }
+
+    @media only screen and  (max-width: 900px) {
+      div.header {
+        max-width: 100%;
+        height: 500px;
+        background-color: rgba(0, 0, 0, 0.060);
+        opacity: 100%;
+      }
+
+      nav {
+        margin-top: 130px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 40px;
+        font-family: fantasy;
+        font-size: 80px;
+      }
+
+      .header1 {
+        font-size: 70px;
+      }
+
+      .destination {
+        display: grid;
+        width: 100%;
+        margin: 0px 0px 30px;
+        background-color: rgb(248, 248, 242);
+        border-radius: 10px;
+      }
+
+      .destination-2 {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        margin: 0px 0px 30px;
+        background-color: rgb(248, 248, 242);
+        border-radius: 10px;
+      }
+
+      .destination div {
+        width: 80%;
+      }
+
+      .destination-2 div {
+        width: 80%;
+      }
+
+      p, span{
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        width: 100%;
+        font-size: 16px;
+        font-weight: 500;
+        color: black;
+      }
+
+      .img-header1 {
+        margin-top: 50px;
+        color: black;
+        font-size: 30px;
+        text-align:  center;
+      }
+
+      .img-header2 {
+        margin-top: 50px;
+        color: black;
+        font-size: 30px;
+        text-align: center;
+      }
+
+      .destination p{
+        width: 90%;
+        text-align: justify;
+        margin-left: 120px;      
+      }
+
+      .destination-2 p{
+        width: 90%;
+        text-align: justify;
+        margin-left: 120px;  
+      }
+
+      a {
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 16px;
+        font-weight: 100%;
+        color: rgb(117, 189, 189);
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: rgb(117, 189, 189);
+        text-decoration: underline;
+      }
+
+      .image, img{
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+      }
+      img{
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+        margin-left: 90px;
+      }
+    }
+
+    @media only screen and  (max-width: 700px) {
+      div.header {
+        max-width: 100%;
+        height: 500px;
+        background-color: rgba(0, 0, 0, 0.060);
+        opacity: 100%;
+      }
+
+      nav {
+        margin-top: 130px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 70px;
+        font-family: fantasy;
+        font-size: 50px;
+      }
+
+      .header1 {
+        font-size: 50px;
+      }
+
+      .destination {
+        display: grid;
+        width: 90%;
+        margin: 0px 30px 30px;
+        background-color: rgb(248, 248, 242);
+        border-radius: 10px;
+      }
+
+      .destination-2 {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 90%;
+        margin: 0px 20px 30px;
+        background-color: rgb(248, 248, 242);
+        border-radius: 10px;
+      }
+
+      .destination div {
+        width: 100%;
+      }
+
+      .destination-2 div {
+        width: 100%;
+      }
+
+      p, span{
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        width: 100%;
+        font-size: 16px;
+        font-weight: 500;
+        color: black;
+      }
+
+      .img-header1 {
+        margin-top: 50px;
+        color: black;
+        font-size: 20px;
+        text-align:  center;
+      }
+
+      .img-header2 {
+        margin-top: 50px;
+        color: black;
+        font-size: 20px;
+        text-align: center;
+      }
+
+      .destination p{
+        width: 90%;
+        text-align: justify;
+        margin-left: 20px;
+      }
+
+      .destination-2 p{
+        width: 90%;
+        text-align: justify;
+        margin-left: 20px;
+      }
+
+      a {
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 16px;
+        font-weight: 100%;
+        color: rgb(117, 189, 189);
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: rgb(117, 189, 189);
+        text-decoration: underline;
+      }
+
+      .nav-link{
+      font-size: 13px; 
+      color: white; 
+      text-decoration: none;
+      margin-left: 30px;
+    }
+
+      .image{
+        width: 100%;
+        height: 450px;
+      }
+
+      img{
+        width: 100%;
+        height: 200px;
+        object-position: cover;
+        margin-left: 0px;
+      }
+    }
+</style>
+</head>
+<body>
+  <!-- HERO -->
+  <div class="web-page">
+    <div class="header">
+      <div class="menu">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar" href="#">Camiguin</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Camiguin</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav" >
+                  <li class="nav-item">
+                    <a class="nav-link" href="Home-Page.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Tourist-spots.html" style=" color: white;text-decoration: underline;">Tourist Spots</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="ThingsToDo.html">Things To Do</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Camiguin</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="travel-guide.html">Travel Guide</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <h1 class="header1">Tourist Spots In Camiguin</h1>
+    </div>
+  </div>
+
+  <div class="scroll-down">
+    <h1 class="img-header1">Katibawasan Falls</h1>
+    <div class="destination">
+      <div class="image">
+        <img src="images/falls.jpg" alt="">
+      </div>
+      <div class="description">
+        <p>
+          Dropping 250 ft., Katibawasan is one of the tallest single-drop waterfalls in the country. 
+          What’s amazing is that it’s on Camiguin – one of the smaller islands of the Philippines! 
+          That’s what happens when you have an island Born of Fire, a.k.a formed by volcanoes. 
+          Katibawasan isn’t only a site to behold, but also a place to be enjoyed. 
+          The pool created by the waterfall is great for dipping and swimming (just make sure not to go under the falls since that can be dangerous!).
+        </p>
+        <p>
+          Katibawasan Falls is located on Camiguin in the municipality of Mambajao.
+          However, the fall isn’t located along the main ring road that circulates the island. Instead, you will need to make your way further inland and up into the mountains.
+          From the main tourist area in Mambajao, it will take around a 20-minute ride to reach the fall.
+        </p> 
+        <p>To learn more about Katibawasan Falls just visit <a href="https://www.jonnymelon.com/katibawasan-falls-in-camiguin/" target="_blank">here</a>.</p>
+      </div>
+    </div>
+    <h1 class="img-header2">Tuasan Falls</h1>
+    <div class="destination-2">
+      <div>
+       <p>
+        Tuasan Falls is one of Camiguin‘s well-kept treasures that would surely delight its visitors. 
+        Its crystal clear water covers a wide area that’s ideal for swimming. Filled with rich vegetation, 
+        you can swim here with great pleasure as you immerse yourself deep in nature’s presence.  
+        Enjoy nature’s harmonious music with Tuasan Fall’s wild splashing sound, the song of the birds and the soft mellow from the insects.
+        A large section of the area has shallow water that’s ideal for kids. Those who are looking for a challenge can swim near the center of 
+        the falls where the water gets deeper. 
+       </p>
+        <p>
+          Located at Brgy. Mainit, Catarman, getting to Tuasan Falls is quite challenging, but worth it when you finally reach your destination. 
+          The safest and most comfortable transportation is the multicab or a light truck that is 
+          commonly used in the Philippines as the means of transport. If you hire tour guides, multicab is part of their service. It is the usual vehicle 
+          used to reach Tuasan Falls. 
+        </p> 
+        <p>To learn more about Tuasan Falls just visit <a href="https://www.jonnymelon.com/tuasan-falls-camiguin/" target="_blank">here</a>.</p>
+      </div>
+      <div class="image">
+        <img src="images/tuasan-falls.jpg" alt="">
+      </div>
+    </div>
+    <h1 class="img-header1">Gui-Ob Church Ruins</h1>
+    <div class="destination">
+      <div class="image">
+        <img style="object-position: right;" src="images/guiob-church-ruins.JPG" alt="">
+      </div>
+      <div class="description">
+        <p>
+          The Gui-Ob Church Ruins are one of the oldest ruins in the country that still stand to this day. Like most old churches in the Philippines, 
+          it was constructed with coral stones and was a major structure where locals could hold weddings, baptisms, funerals, and masses. However, 
+          the church was heavily damaged in 1871 when Mt. Vulcan erupted for the third time. Following the explosion of lava, the church was reduced 
+          to the ruins you can see today. 
+          Upon visiting the ruins, most visitors light a candle before entering the grounds and offer a prayer for the lives lost during the tragedy. 
+          Along with this, you can also take the time to snap photos by the ruins and learn about the history of the church. 
+        </p>
+        <p>
+          The Old Spanish Church Ruins are located in Catarman on Camiguin Island.
+          From the main tourist area of Mambajao, it’s approximately a 10-minute drive to reach the Old Church Ruins Camiguin.
+        </p>
+        <p>To learn more about Gui-Ob Church Ruins just visit <a href="https://www.jonnymelon.com/old-church-ruins-in-camiguin/" target="_blank">here</a>.</p>
+      </div>
+    </div>
+    <h1 class="img-header2">Sunken Cemetery</h1>
+    <div class="destination-2">
+      <div class="description">
+        <p>
+          As its name implies, this burial ground is located underneath the waves off the northwestern coast of Camiguin. 
+          Its spot is marked by a large cross that you can spot from Camiguin. To view the cemetery, most travelers ride a van bound for Mt. Vulcan, 
+          where they can get an unobstructed view of the Sunken Cemetery. It can also be accessible by the shore with a short banca ride to visit the cross. 
+          The story of the Sunken Cemetery can be traced back to the 1800s when Mount Vulcan was still an active volcano. It first erupted in 1827, 
+          followed by a second one in 1862. However, its third eruption in 1871 was its most destructive, causing the cemetery to sink. It sunk deeper when Mt. Vulcan erupted once again in the 1960s.
+        </p>
+        <p>
+          The Sunken Cemetery is located in Catarman on Camiguin Island.
+          From the main tourist area of Mambajao, it’s approximately a 10-minute drive to reach the Sunken Cemetery Camiguin.
+        </p>
+        <p>To learn more about Sunken Cemetery just visit <a href="https://www.jonnymelon.com/sunken-cemetery-camiguin/" target="_blank">here</a>.</p>
+      </div>
+      <div class="image">
+        <img src="images/sunken-cemetery-camiguin.jpg" alt="">
+      </div>
+    </div>
+    <h1 class="img-header1">Mantigue Island</h1>
+    <div class="destination">
+      <div class="image">
+        <img src="images/mantigue.jpg" alt="">
+      </div>
+      <div class="description">
+        <p>
+          Mantigue Island, also known as Magsaysay Island, is just a small one with a land area of just about four hectares. 
+          It is dotted with mangroves and vegetation on the center and surrounded with powdery white sand. 
+          The surrounding water is a marine sanctuary that hosts a vivid marine life. Its rich waters make it an ideal destination for scuba diving and snorkeling. 
+          Expect to see huge sea turtles, school of jacks, barracudas, mantas, occasional reef sharks and more!
+          The island promises an unforgettable tropical experience. Whether you are into its depth or just enjoy basking on its paradise vibe, Mantigue Island.
+        </p>
+        <p>
+          Mantigue Island is located in Mahinog, 3.5 km off the east coast of Camiguin Island.
+          From the main tourist area of Mambajao, it’s approximately a 30-minute drive to reach the departure area in Mahinog, 
+          and the boat ride over to the island takes around 20 minutes.
+        </p>
+        <p>To learn more about Mantigue Island just visit <a href="https://www.jonnymelon.com/mantigue-island-camiguin/" target="_blank">here</a>.</p>
+      </div>
+    </div>
+    <h1 class="img-header2">The Walkway To The Old Volcano</h1>
+    <div class="destination-2">
+      <div class="description">
+       <p>
+        The Walkway to Volcano is located in Barangay Bonbon, Catarman in Camiguin, it is a kilometer away from Catarman’s national highway. 
+        It is also close to Paras Beach Resort and Caves Dives Resort. This walkway is a climbing spot paired with 14 human sized-statues located at the Old Volcano, 
+        known as Mt. Vulcan. The place has been recognized as one of the pilgrimage sites for religious Catholics during the Lenten season, as they can practice their 
+        belief of repenting at the site during those times.
+       </p>
+       <p>
+        Aside from the awesome view, guests can enjoy taking pictures along the way or even pose near the statues. Local vendors who sell souvenirs 
+        and snacks are around the area for anyone who might want to find a keepsake or something to eat during the trek.
+       </p>
+        <p>To learn more about The Walkway To The Old Volcano just visit <a href="https://shellwanders.com/walkway-to-the-old-volcano-camiguin-philippines/" target="_blank">here</a>.</p>
+      </div>
+      <div class="image">
+        <img src="images/walkway-to-the-old-volcano.jpg" alt="">
+      </div>
+    </div>
+    <h1 class="img-header1">Sto. Niño Cold Spring</h1>
+    <div class="destination">
+      <div class="image">
+        <img src="images/Sto-Niño-Cold-Spring.jpg" alt="">
+      </div>
+      <div class="description">
+        <p>
+          Sto. Niño Cold Spring located in the town of Sagay in the province of Camiguin. This spot is best known for its cool and fresh waters that make for a great escape, 
+          especially during the summer months of March to May. The spring's freshwater comes from the nearby Mt. Mambajao, and is naturally filtered by the minerals found in the mountain as it makes its way down to the natural pool. 
+          The spring measures around 25 meters by 40 meters, while its depth ranges from 4 to 8 feet. Along with swimming and relaxing in the cool waters, travelers can also rent cottages and cabanas around the spring, where they can 
+          relax after swimming. 
+        </p>
+       <p>
+          The easiest way to get to Sto Nino Cold Spring is to rent a motorbike and drive here with the help of Google Maps.
+          It is highly recommend hiring a tricycle for a day. The public transportation in Camiguin is lacking, so having a private driver will make your life so much easier. 
+        </p>
+        <p>To learn more about Sto. Niño Cold Spring just visit <a href="https://shellwanders.com/sto-nino-cold-spring-camiguin-guides-tips/" target="_blank">here</a>.</p>
+      </div>
+    </div>
+    <h1 class="img-header2">Mt. Hibok-hibok</h1>
+    <div class="destination-2">
+      <div class="description">
+        <p>
+          Mt. Hibok-hibok, also known as Catarman Volcano, has its summit at an elevation of 1,332 meters (4,370 feet) above sea level. The eruption in the 1800s destroyed the town of Catarman, 
+          resulting in the sinking of the famous Sunken Cemetery and the Gui-ob Church Ruins.
+          It is one of the most active volcanoes in the Philippines and has erupted several times in the past century, with the most recent eruption occurring in 1953. The mountain is a popular 
+          destination for hikers and mountaineers due to its challenging terrain and stunning views of the surrounding landscape. Despite its active status, it is considered safe for hiking as 
+          long as proper precautions and safety measures are taken. The ascent to the summit usually takes around 4-5 hours and offers a variety of landscapes, from dense forest to rocky terrain. 
+          At the summit, hikers can enjoy panoramic views of the island and the nearby sea.
+        </p>
+        <p>To learn more about The Walkway To The Old Volcano just visit <a href="https://adrenalineromance.com/2019/08/16/mt-hibok-hibok-at-the-top-of-the-island-of-fire/" target="_blank">here</a>.</p>
+      </div>
+      <div class="image">
+        <img src="images/hibok-hibok.jpg" alt="">
+      </div>
+    </div>
+    <h1 class="img-header1">Taguines Lagoon</h1>
+    <div class="destination">
+      <div class="image">
+        <img src="images/Taguines-Lagoon.jpg" alt="">
+      </div>
+      <div class="description">
+        <p>
+          Taguines Lagoon or also known as Camiguin Blue Lagoon is one of the beautiful destination that can be found in the island of Camiguin. It is where Camiguin Blue Lagoon Cottages is situated.
+          This beautiful bamboo cottages nestles in the wooded slopes of the tranquil Taguines lagoon that offers superb views of the Bohol Sea and Mantigue Island. Camiguin Blue Lagoon Cottages has 
+          mainly three big cottages which are devided into different room types. They have the Tres Marias Cottage which gives a good view of the lagoon, they also offer cottages with bath tub, 
+          airconditioned rooms for groups as well as family rooms. Their cottages give a beautiful view of the island across the Blue Lagoon.
+        </p>
+        <p>
+          Taguines Lagoon is located in the town of Mahinog, just a few minutes away from the Benoni Port of Camiguin, is an artificial inland lagoon. This man-made lagoon was created primarily 
+          for fishbreeding purposes, which explains why the local Bureau of Fisheries office is also located there.
+        </p>
+        <p>To learn more about Taguines Lagoon just visit <a href="https://www.jeffersodyssey.com/down-south-the-taguines-lagoon-of-camiguin/" target="_blank">here</a>.</p>
+      </div>
+    </div>
+    <h1 class="img-header2">The Giant Clam Sanctuary</h1>
+    <div class="destination-2">
+      <div class="description">
+      <p>
+        The Giant Clam Sanctuary is another must-visit attraction in Camiguin Island.
+        The Giant Clam Sanctuary is located in the small fishing village of Cantaan in Guinsiliban, Camiguin. 
+        It was established in 1977 by a non-government organization called Kabila Giant Clam Conservation and Ocean Nursery.
+        The sanctuary is home to over a thousand giant clams. Seven out of the 9 species of clams worldwide can be found here, 
+        including the Tridacna gigas which is the most endangered species. The sanctuary also takes care of clams that can create pearls.
+      </p>
+      <p>
+        The Giant Clam Sanctuary is close to Benoni Port and about 1 hour away from the capital Mambajao.
+      </p>
+        <p>To learn more about The Walkway To The Old Volcano just visit <a href="https://www.diklap.com/2021/12/the-giant-clam-sanctuary-camiguin-island.html" target="_blank">here</a>.</p>
+      </div>
+      <div class="image">
+        <img src="images/The-Giant-Clam-Sanctuary.jpg" alt="">
+      </div>
+    </div>
+    <h1 class="img-header1">Ardent Hibok-Hibok Spring Resort</h1>
+    <div class="destination">
+      <div class="image">
+        <img src="images/Ardent Hibok-Hibok Spring Resort1.jpg" alt="">
+      </div>
+      <div class="description">
+        <p>
+          Arguably the most popular spring places in the whole of Camiguin, Ardent Hibok-Hibok Spring Resort is located in Esperanza Tagdo, 
+          Mambajao, Camiguin. More commonly referred to as Ardent Hot Springs, it has several pools that visitors may choose from although the 
+          favorite is clearly the warmest, with water about 40 degrees Celsius.
+        </p>
+        <p>
+          From the main tourist area of Mambajao, ride a tricycle or rent a car, it’s approximately a 10-minute drive to reach the hot springs.
+        </p>
+        <p>To learn more about Ardent Hibok-Hibok Spring Resort just visit <a href="https://www.jonnymelon.com/ardent-hot-springs/" target="_blank">here</a>.</p>
+      </div>
+    </div>
+    <h1 class="img-header2">Binangawan Waterfalls</h1>
+    <div class="destination-2">
+      <div class="description">
+        <p>
+          The Binangawan Waterfalls is located in the municipality of Sagay. It has several miniature and gigantic waterfall that gush through the granite stone. 
+          It’s water goes through the main pool that is surrounded by thick vegetation. The waterfalls are named for the Bisayan word “Bangaw” which means, 
+          the rainbow that strongly claimed its namesake as the rainbow falls.
+        </p>
+        <p>
+          In terms of road accessibility, a paved route is already constructed and the easiest way to reach the main fall is to hire a motorcycle in Sagay. 
+        </p>
+        <p>To learn more about Binangawan Waterfalls just visit <a href="https://www.diklap.com/2021/12/the-magnificent-beauty-of-binangawan.html" target="_blank">here</a>.</p>
+      </div>
+      <div class="image">
+        <img src="images/Binangawan Waterfall.jpg" alt="">
+      </div>
+    </div>
+    <h1 class="img-header1">Camiguin White Island</h1>
+    <div class="destination">
+      <div class="image">
+        <img src="images/White Island2.jpg" alt="">
+      </div>
+      <div class="description">
+        <p>
+          Camiguin's White Island is a must-visit destination for any traveler seeking the best white sand beaches in the Philippines. 
+          Along with its powdery shore, the island is known for its tendency to change shape depending on the tide. Since the island is completely bare, 
+          it's perfect for sunbathing and a relaxing swim in the surrounding waters. If you'd want some shade during your stay here, it's recommended to bring your own umbrella. 
+        </p>
+        <p>
+          Camiguin White Island is located just 2km off the north coast of Mambajao. To get to White Island, make your way to the White Island Ferry Terminal in Yumbing. From there, it’s a 10-minute boat ride to White Island. 
+        </p>
+        <p>To learn more about Camiguin White Island just visit <a href="https://www.jonnymelon.com/white-island-camiguin/" target="_blank">here</a>.</p>
+      </div>
+    </div>
+    <h1 class="img-header2">Bura Soda Water Park</h1>
+    <div class="destination-2">
+      <div class="description">
+        <p>
+          Bura Soda Water Park is one of the most popular spring resorts in Camiguin. Its clean and clear water is not just good for swimming but for drinking as well. 
+          From the resort’s name itself, they claim that the overflowing water here tastes like soda. That would also mean that a visit here automatically gives you an unli-soda drink!
+          According to folklore, the area near the Soda Swimming Pool on certain occasions is visited by “ungo” or “bal-bal” (superstitious monsters). Praying to god and asking a silent 
+          permission from these superstitious creatures are the practice before swimming. There have been several incidents where locals saw these unknown creatures but it’s a good thing they don’t hurt or mind you.
+          If you see one, just don’t mind them too and be happy that you probably have a third eye. To date, there have been no accidents reported yet and the Soda Swimming Pool continues to provide leisure and relaxation 
+          to the locals and tourists.
+        </p>
+        <p>
+          Bura Soda Water Park is located in Barangay Bura, in the municipality of Catarman. It is less than a 30-minute drive from Mambajao, the provincial capital.
+        </p>
+        <p>To learn more about Bura Soda Water Park just visit <a href="https://www.phtourguide.com/soda-water-swimming-pool-in-camiguin/" target="_blank">here</a>.</p>
+      </div>
+      <div class="image">
+        <img src="images/Bura Soda Water Park2.jpg" alt="">
+      </div>
+    </div>
+    <h1 class="img-header1">Katunggan Park</h1>
+    <div class="destination">
+      <div class="image">
+        <img src="images/Kaunggan-Mangrove-Park-Camiugin2.jpg" alt="">
+      </div>
+      <div class="description">
+        <p>
+          Katunggan Park is Camiguin‘s well-known mangrove park because of its enchanting atmosphere and peculiar tone. It can be viewed as romantic and charming or wonderfully eerie because of its freakish trunks and irregularly-formed branches. 
+          Its swamp-like shallow waters that are filled with dark and pointy roots look like dungeon traps. The idea that behind their large roots lurks a crocodile or an anaconda can get in your head because of their creepy look.
+        </p>
+        <p>
+          Katunggan Park is located in Mahinog, Camiguin just after Taguines Lagoon. The best way to get there is by tricycle, which you can hail from anywhere on the island. 
+          You can also rent a scooter or mountain bike and explore the island at your own pace.
+        </p>
+        <p>To learn more about Katunggan Park just visit <a href="https://www.projectlupad.com/great-escape-from-citys-hustle-and-bustle-at-katunggan-park-in-camiguin/" target="_blank">here</a>.</p>
+      </div>
+    </div>
+  </div>
+  <div class="web-footer">
+    <div class="footer">
+      <p class="footer-text">Copyright © 2024-2025 – All Rights Reserved.</p>
+      <p class="footer-text">Articles in this website may include affiliate links</p>
+    </div>
+  </div>
+</body>
+</html>

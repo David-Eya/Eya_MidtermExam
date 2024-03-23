@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camiguin Travel Guide</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script></head>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="general.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      color: white;
+      font-size: 25px;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: rgb(240, 240, 240);
+    }
+
+    p, span{
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      width: 690px;
+      font-size: 20px;
+      color: black;
+      text-align: justify;
+    }
+
+    div.header {
+      max-width: 100%;
+      height: 700px;
+      background-color: rgba(0, 0, 0, 0.060);
+      opacity: 100%;
+    }
+    
+    .web-page {
+      background-image: url(images/bg2.jpg);
+      background-repeat: no-repeat;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    nav {
+      margin-top: 150px;
+    }
+
+    .navbar, .navbar:hover {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 70px;
+      font-family: fantasy;
+      font-size: 110px;
+    }
+
+    .header1, .header2 {
+      text-shadow: black 0px 0px 10px;
+    }
+
+    .destination {
+      display: grid;
+      width: 100%;
+      margin: 0px 25% 30px;
+      background-color: rgb(248, 248, 242);
+      border-radius: 10px;
+    }
+
+    a {
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-size: 16px;
+      font-weight: 100%;
+      color: rgb(117, 189, 189);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: rgb(117, 189, 189);
+      text-decoration: underline;
+    }
+
+    [class*=nav-] {
+      color: rgba(255, 255, 255, 0.667);
+      transition: 0.15s;
+      font-size: 15px;
+    }
+
+    [class*=nav-]:hover {
+      color: white;
+      text-decoration: underline;
+    }
+
+    .img-header1 {
+      margin-top: 50px;
+      color: black;
+      font-size: 30px;
+      text-align:  left;
+      margin-left: 30px;
+    }
+
+    .img-header2 {
+      margin-top: 50px;
+      color: black;
+      font-size: 30px;
+      text-align: right;
+      margin-right: 20px;
+    }
+
+    img {
+      width: 700px;
+      height: 500px;
+      object-fit: cover;
+    }
+
+    .image {
+      max-width: 700px;
+      height: 500px;
+    }
+
+    .web-footer {
+      margin-top: 80px;
+      padding-top: 20px;
+      height: 100px;
+      background-color: rgb(12 17 21);
+    }
+
+    .footer > .footer-text {
+      margin: 5px;
+      width: auto;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.381);
+    }
+
+    button {
+      border: none;
+    }
+
+    .navbar-toggler-icon {
+    color: #dddddd;
+    background-image: url(icon/menu2.png);
+    width: 2em;
+    height: 2em;
+    border: none;
+  }
+
+  .navbar, .navbar:hover {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+
+  .scoll-down {
+    display: flex;
+    width: auto;
+    margin: 0px 200px 0px;
+    background-color: rgb(248, 248, 242);
+    border-radius: 10px;
+  }
+
+  .destination li {
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      width: 690px;
+      font-size: 25px;
+      font-weight: 500;
+      color: black;
+      margin: 25px 15px 0px;
+    }
+
+  .to-do {
+      text-align: left;
+      color: rgba(0, 0, 0, 0.804);
+      margin: 20px 15px 0px;
+      font-family: fantasy;
+      font-size: 30px;
+    }
+
+    @media only screen and  (max-width: 1200px) {
+      p, span{
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      width: 90%;
+      font-size: 18px;
+      color: black;
+    }
+
+    body {
+      height: auto;
+      background-color: rgb(240, 240, 240);
+    }
+    nav {
+      margin-top: 130px;
+    }
+
+    div.header {
+      width: 100%;
+      height: 500px;
+      background-color: rgba(0, 0, 0, 0.060);
+      opacity: 100%;
+    }
+    .web-page {
+      background-image: url(images/bg2.jpg);
+      background-repeat: no-repeat;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      }
+
+    h1 {
+      text-align: center;
+      margin-top: 40px;
+      font-family: fantasy;
+      font-size: 70px;
+    }
+
+    .destination {
+      display: grid;
+      width: 100%;
+      margin: 0px 80px 30px;
+      background-color: rgb(248, 248, 242);
+      border-radius: 10px;
+    }
+
+    .scoll-down {
+    display: flex;
+    width: auto;
+    margin: 0px 100px 0px;
+    background-color: rgb(248, 248, 242);
+    border-radius: 10px;
+  }
+
+  .destination li {
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      width: 690px;
+      font-size: 25px;
+      font-weight: 500;
+      color: black;
+      margin: 25px 15px 0px;
+    }
+
+    .to-do {
+      text-align: left;
+      color: rgba(0, 0, 0, 0.804);
+      margin: 20px 15px 0px;
+      font-family: fantasy;
+      font-size: 30px;
+    }
+  }
+
+  @media only screen and  (max-width: 900px) {
+    p, span{
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      width: 90%;
+      font-size: 16px;
+      color: black;
+    }
+
+    body {
+      height: auto;
+      background-color: rgb(240, 240, 240);
+    }
+    nav {
+      margin-top: 130px;
+    }
+
+    a {
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 16px;
+        font-weight: 100%;
+        color: rgb(117, 189, 189);
+        text-decoration: none;
+      }
+
+    div.header {
+      width: 100%;
+      height: 500px;
+      background-color: rgba(0, 0, 0, 0.060);
+      opacity: 100%;
+    }
+    .web-page {
+      background-image: url(images/bg2.jpg);
+      background-repeat: no-repeat;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      }
+
+    h1 {
+      text-align: center;
+      margin-top: 40px;
+      font-family: fantasy;
+      font-size: 50px;
+    }
+
+    .destination {
+      display: grid;
+      width: 100%;
+      margin: 20px 20px 30px;
+      background-color: rgb(248, 248, 242);
+      border-radius: 10px;
+    }
+
+    .scoll-down {
+    display: flex;
+    width: auto;
+    margin: 0px 70px 0px;
+    background-color: rgb(248, 248, 242);
+    border-radius: 10px;
+  }
+
+  .destination li {
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      width: 80%;
+      font-size: 20px;
+      font-weight: 500;
+      color: black;
+      margin: 25px 15px 0px;
+    }
+
+    .to-do {
+      text-align: left;
+      color: rgba(0, 0, 0, 0.804);
+      margin: 20px 15px 0px;
+      font-family: fantasy;
+      font-size: 20px;
+    }
+  }
+
+  @media only screen and  (max-width: 600px) {
+    p, span{
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      width: 80%;
+      font-size: 16px;
+      color: black;
+      text-align: justify;
+      margin: 25px 40px 20px;
+    }
+
+    body {
+      height: auto;
+      background-color: rgb(240, 240, 240);
+    }
+    nav {
+      margin-top: 130px;
+    }
+
+    div.header {
+      width: 100%;
+      height: 500px;
+      background-color: rgba(0, 0, 0, 0.060);
+      opacity: 100%;
+    }
+    .web-page {
+      background-image: url(images/bg2.jpg);
+      background-repeat: no-repeat;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      }
+
+    h1 {
+      text-align: center;
+      margin-top: 40px;
+      font-family: fantasy;
+      font-size: 40px;
+    }
+
+    .destination {
+      display: grid;
+      width: 100%;
+      margin: 0px 20px 30px;
+      background-color: rgb(248, 248, 242);
+      border-radius: 10px;
+    }
+
+    .scoll-down {
+      display: flex;
+      width: 100%;
+      margin: 0px 0px 0px;
+      background-color: rgb(248, 248, 242);
+      border-radius: 10px;
+    }
+
+  .destination li {
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      width: 100%;
+      font-size: 16px;
+      font-weight: 500;
+      color: black;
+      margin: 25px 30px 0px;
+    }
+
+    .to-do {
+      text-align: left;
+      color: rgba(0, 0, 0, 0.804);
+      margin: 20px 35px 0px;
+      font-family: fantasy;
+      font-size: 16px;
+    }
+  }
+</style>
+</head>
+<body>
+  <!-- HERO -->
+  <div class="web-page">
+    <div class="header">
+      <div class="menu">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar" href="#">Camiguin</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Camiguin</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav" >
+                  <li class="nav-item">
+                    <a class="nav-link" href="Home-Page.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Tourist-spots.html">Tourist Spots</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="ThingsToDo.html" style=" color: white;text-decoration: underline;">Things To Do</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Camiguin</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="travel-guide.html">Travel Guide</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <h1 class="header1">Things To Do In Camiguin</h1>
+    </div>
+  </div>
+
+  <div class="scoll-down">
+    <div class="destination">
+      <div>
+        <p>
+          Camiguin may be a small island in the Philippines, but this paradise has a lot to offer to those who wish to escape from the hustle and bustle of city life. 
+          This island province of Northern Mindanao stands out among the local tourist destinations because of its relatively untouched natural environment and diverse ecosystem.
+        </p>
+        <p>
+          Fill yourself with energy and awe with Camiguin’s attractions. To take full advantage of your holiday getaway, here are 20 things to do in Camiguin.
+        </p>
+      </div>
+      <div>
+        <h1 class="to-do">1. Get Sun-Kissed At White Island</h1>
+        <p>
+          Flaunt your favorite swimwear and bask in the sun on this white sandbar off the northern shore of Mambajao. Marine life surrounds this uninhabited sandbar and is a great spot to view Mt. 
+          Hibok-hibok and the Old Vulcan from afar. Swim in the crystal clear waters. Capture the best jump shots. Record the awe-inspiring aerial view of White Island. These are other fun things to do besides sunbathing.
+        </p>
+      </div>
+      <div>
+        <h1 class="to-do">2. Explore Camiguin's Enchanting Waterfalls</h1>
+        <ul>
+          <li>Katibawasan Falls</li>
+        </ul>
+        <p>
+          One of the most visited attractions in Camiguin is the 250-feet high Katibawasan Falls.
+          Plants, trees, and boulders surround the area. The sound of nature gives a relaxing vibe while plunging into its icy waters. 
+          Man-made steps toward the falls provide easy access to everyone.
+        </p>
+        <ul>
+          <li>Tuasan Falls</li>
+        </ul>
+        <p>
+          Tuasan Falls is a small, well-kept waterfall in Catarman, Camiguin. You can swim into the cold clear waters or take photos of the mesmerizing views of nature. Or rest on a preferred spot and be connected with nature.
+        </p>
+        <ul>
+          <li>Binangawan Falls</li>
+        </ul>
+        <p>
+          If you’re up for a challenging adventure, conquer the Binangawan Falls. It’s a hidden gem sitting in the middle of a dense forest in Sagay. Be fascinated with the breathtaking views of nature, plus rainbow formations make the trip all worthwhile.
+        </p>
+      </div>
+      <div>
+        <h1 class="to-do">3. Hot-Cold-Soda Spring Hoping In Camiguin</h1>
+        <ul>
+          <li>Ardent Hot Springs</li>
+        </ul>
+        <p>
+          When talking about hot springs in Camiguin, the Ardent Hot Springs immediately come to mind. Mossy rocks and lush greenery surround the huge pools of spring water. The flowing water here comes from a natural waterfall that used to be heated by a nearby volcano.
+        </p>
+        <ul>
+          <li>Tangub Hot Spring</li>
+        </ul>
+        <p>
+          Locals often call the Tangub Hot Spring as the Ocean or the Mainit Hot Spring. This hot spring by the ocean has water temperatures that shift from cold to hot as tide changes. At low tides, you can immerse yourself in the warm pool water and enjoy watching the splashes 
+          of cold seawater merging with the hot spring. A few meters away from the rocky shores is a great spot for snorkeling and scuba diving.          
+        </p>
+        <ul>
+          <li>Sto. Niño Cold Spring</li>
+        </ul>
+        <p>
+          The man-made Sto. Niño Cold Spring is a great swimming spot around nature. Its flowing water comes from a natural underground source. You can plunge into the refreshingly cold water, especially during hot seasons of the year.       
+        </p>
+        <ul>
+          <li>Saay Cold Spring</li>
+        </ul>
+        <p>
+          The Saay Cold Spring conveniently sits at the foot of Mt. Hibok-Hibok in Quipasa, Mambajao. This well-kept cold spring has a small- and medium-sized pools. You can swim for endless hours here as it’s open to the public. However, they encourage you to drop your donations for the maintenance of the area.        </p>
+        <ul>
+          <li>Macao Cold Spring</li>
+        </ul>
+        <p>
+          The Macao Cold Spring in Mahinog is a natural pool of turquoise-colored waters. Big trees and green vegetation surround the pool and keep the area cool and shady.      
+        <ul>
+          <li>Bura Soda Swimming Pool</li>
+        </ul>
+        <p>
+          Another of Camiguin’s unique attractions is the Bura Soda Swimming Pool. It’s the only pool in the country that contains pure soda water. Thanks to Bura’s volcanic springs which supply these pools with pure and clear soda water.  
+        </p>
+      </div>
+      <div>
+        <h1 class="to-do">4. Take Selfies And Enjoy The Stuning View Of The Tongatok Cove</h1>
+        <p>
+          A cliff near the Sunken Cemetery reveals a beautiful secluded cove. You’ll be mesmerized by the sight of deep blue waters. Remember to take your best selfies and capture moments in this spot. The stunning view can make you feel like you’re the king or the queen of the world.
+        </p>
+      </div>
+      <div>
+        <h1 class="to-do">5. Discover Kabila White Beach And Explore The Giant Clam Sanctuary</h1>
+        <p>
+          Kabila White Beach is a relatively untouched white sand beach in Cantaan, Guinsiliban. You can own the place and delve into the crystal clear waters.
+        </p>
+        <p>
+          Near this beach nestles the Giant Clam Sanctuary. It’s a perfect place to snorkel and appreciate the marine life with about 3,000 giant clams thriving on the ocean floor. Young female guides can give you interesting facts and an educational tour around the sanctuary.
+        </p>
+      </div>
+      <div>
+        <h1 class="to-do">6. Emjoy The Beach Life At The Mantigue Island Nature Park</h1>
+        <p>
+          Don’t limit your time for island hopping in Camiguin. Mantigue Island is best enjoyed all day long. With about a 30-minute boat ride off Mahinog, you can reach the island of Mantigue.
+        </p>
+        <p>
+          Explore the sandy paths within the vicinity. Go sightseeing around nature while you walk down those bamboo bridges. A glass bottom boat tour can give you a close-up view of marine life around this government-protected island. And don’t forget the pictures!
+        </p>
+      </div>
+      <div>
+        <h1 class="to-do">7. Snorkel At The One-Of-A-Kind Sunken Cementery</h1>
+        <p>
+          A volcanic eruption of Mt. Vulcan in the 1870s sank most of Catarman, including the cemetery. And in 1982, a giant Cross Marker was built to serve as a memento of the tragedy.
+        </p>
+        <p>
+          Knowing about the sad story of this place may give you the chills to swim into the water. But as you snorkel, you’ll be amazed at the beautiful marine life thriving under the sea. Seeing beautiful sea creatures will even put all your fears away.
+        </p>
+        <p>
+          If you wish to explore this place, low tide in the afternoon makes it the best time to snorkel at the Sunken Cemetery.
+        </p>
+      </div>
+      <div>
+        <h1 class="to-do">8. immerse Yourself Into The Captivating Jidcup And Burias Shoals</h1>
+        <p>
+          Never miss the chance to experience diving under the sea if you’re at Jicdup and Burias Shoals. These beautiful diving spots in Camiguin look so magical with the abundant and colorful marine life.
+        </p>
+        <p>
+          Burias and Jicdup Shoals are natural reefs of underwater paradise. Beautiful colored corals and different schools of fishes sprawl around these shoals. Whether you’re an amateur diver or an underwater photographer, you might get hooked exploring the enchanting aquatic life.
+        </p>
+      </div>  
+      <div>
+        <h1 class="to-do">9. Conquer Mount Hibok-Hobok</h1>
+        <p>
+          Mt. Hibok-hibok is a famous hiking destination for most trekkers and mountain climbers in the country. But first, you have to obtain a permit from the DENR office before you can go hiking on this volcano. Tour agencies around Mambajao can assist and sort it out for you.
+        </p>
+        <p>
+          Reaching the summit can put you in a challenge, but the scenic views of Camiguin island can relieve tiredness. You can take a dip in hot and cold springs to soothe those tired and aching muscles.
+        </p>
+      </div>  
+      <div>
+        <h1 class="to-do">10. Hike At The Walkway To The Old Volcano And Stations Of The Cross</h1>
+        <p>
+          Climb a thousand steps while witnessing the 14 Stations of the Cross at the Walkway to the Old Volcano and Stations of the Cross. This place is the popular venue for an important annual Roman Catholic event called “Panaad.” During the Holy Week, people flock here to express their repentance, offer prayers, and be reminded of how Jesus Christ suffered to save us from sin.
+        </p>
+       <p>
+        Hiking around Mt. Vulcan doesn’t require a permit, and you can have about an hour walk around nature.
+       </p>
+      </div>  
+      <div>
+        <h1 class="to-do">11. Uncover The History Of The Guiob Church Ruins</h1>
+        <p>
+          Built in the 16th century but was later brought to ruin by the Mt. Vulcan volcanic eruption. What you see today are what was left of the old Spanish church and convent called Cotta Bato. There’s a small chapel near the ruins where a mass is often celebrated.
+        </p>
+      </div>  
+      <div>
+        <h1 class="to-do">12. Be A Daredevil At The Camiguin Zipline</h1>
+        <p>
+          Daredevils can have fun at the Camiguin zipline in Mahinog. You can get an aerial view of the Camiguin island while moving across a 700-meter zipline.
+        </p>
+      </div>  
+      <div>
+        <h1 class="to-do">13. Enjoy Aquasports At The Taguines Lagoon</h1>
+        <p>
+          The Taguines Lagoon Aquasports and Recreational Facility offers several water activities for everyone. You’ll never be bored with the different aquasports equipment and activities available. Go kayaking, boating or paddle-boarding in the lagoon. Challenge yourself inside a Zorb ball. And if you need a break, check out aquaculture cages of milkfish and mussels.
+        </p>
+      </div>  
+      <div>
+        <h1 class="to-do">14. Join In Free Diving Lessons At Kurma</h1>
+        <p>
+          Kurma takes out the daredevil in you. Imagine yourself diving into the ocean free from protective equipment. Professional divers in Kurma can teach you how to free dive deep down the sea and experience the aquatic life in its purest form.
+        </p>
+      </div>  
+      <div>
+        <h1 class="to-do">15. Food Tripping In Camiguin</h1>
+        <ul>
+          <li>Hayahay Cafe</li>
+        </ul>
+        <p>
+          Have a guilt-free vegan feast at the Hayahay Cafe in Mambajao. Pancakes, smoothies, and tasty vegan dishes are a must-try for the locals and tourists.
+        </p>
+        <ul>
+        <li>Bintana sa Paraiso Resort in Binunsaran</li>
+        </ul>
+        <p>
+          Experience world cuisine curated by the owner Kate Hancock in Binunsaran Mambajao, Camiguin. The ingredients  are freshly-made and hand-picked from the garden of the Chef himself.
+        </p>
+        <ul>
+          <li>Guererra</li>
+        </ul>
+        <p>
+          Enjoy delicious Thai and Vietnamese cuisine around stunning views of the Bohol Sea and the rice paddies. Everything from their menu is made up of ingredients that are hand-picked from their farm.
+        </p>
+      </div>  
+      <div>
+        <h1 class="to-do">16. Be Like A Sentinil At The Moro-Moro Watchtower</h1>
+        <p>
+          In Guinsiliban, you can find the remains of a centuries-old Moro-Moro Watchtower. This historic landmark was used as a watchtower to safeguard and warn the locals against incoming Muslim marauders who often wreak havoc in the area.
+        </p>
+      </div> 
+      <div>
+        <h1 class="to-do">17. Visit Ancestral Houses In Camiguin</h1>
+        <p>
+          In Camiguin, you can observe centuries-old Spanish style houses.
+          Two of the most impressive buildings are the ancestral house of the Francisco family in Los Libertadores Street and the Centennial House of the Corrales family in Lakas, Mambajao. Both houses were built in the 1800s.
+        </p>
+        <p>
+          It’s astounding how these structures survived the volcanic eruptions during those times. Even a century-old Pili nut tree stands tall near the Centennial House.
+        </p>
+      </div> 
+      <div>
+        <h1 class="to-do">18. Try Out Camiguin Delicaies</h1>
+        <p>
+          Every part of the Philippines has special delicacies that are usually bought as homecoming gifts. Camiguin has its own must-try foods if you ever set foot on this island.
+        </p>
+        <ul>
+          <li>Pastel</li>
+        </ul>
+        <p>
+          Vjandep Pastel is neither an art medium nor a meat-filled pastry from the Latin Americas. It’s a soft bun with sweet fillings. Originally commercialized in custard “yema” filling, but now you can try assorted flavors such as strawberry, jackfruit, cheese, chocolate, pineapple, and purple yam. You can eat it alone or pair it with your favorite drink or coffee.
+        </p>
+        <ul>
+          <li>Kiping</li>
+        </ul>
+        <p>
+          Around the ports or tourists destinations, you can find vendors carrying plastic containers selling Camiguin’s famous street food known as “Kiping.” This delicacy is made of sun-dried cassava paste, which is fried and lightly squeezed with caramelized coconut cream.
+        </p>
+        <ul>
+          <li>Fried Dried Squid</li>
+        </ul>
+        <p>
+          This delicacy is similar to the Japanese snack “Surume.” Unlike other dried squid products in Mindanao, Camiguin’s dried squid has its own distinct taste that’s sought-after by locals and tourists. It’s a flattened sun-dried whole squid that is lightly fried to make it crispy. People usually dip it in spiced vinegar before eating.
+        </p>
+        <ul>
+          <li>Lanzones</li>
+        </ul>
+        <p>
+          This sweet Asian fruit also called “Longkong” or “Langsat” is a must-try, especially from September to November. Every October, Camiguin holds its annual “Lanzones Festival” in celebration for the harvest season of Lanzones. This fruit grows well in this island, thanks to the richly cultivated soil in the province.
+        </p>
+        <ul>
+          <li>Surol</li>
+        </ul>
+        <p>
+          Surol is a signature soup dish in Camiguin that’s made up of chicken, coconut milk, and oregano. This signature dish isn’t typically made or bought as a homecoming gift, but it’s a must-try food in Camiguin.
+        </p>
+      </div> 
+    </div>
+  </div>
+  <div class="web-footer">
+    <div class="footer">
+      <p class="footer-text">Copyright © 2024-2025 – All Rights Reserved.</p>
+      <p class="footer-text">Articles in this website may include affiliate links</p>
+    </div>
+  </div>
+</body>
+</html>

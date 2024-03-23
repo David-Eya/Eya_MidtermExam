@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camiguin Travel Guide</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script></head>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="general.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      color: white;
+      font-size: 25px;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: rgb(240, 240, 240);
+    }
+
+    p, span{
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      width: 690px;
+      font-size: 20px;
+      color: black;
+      text-align: justify;
+    }
+
+    div.header {
+      max-width: 100%;
+      height: 700px;
+      background-color: rgba(0, 0, 0, 0.060);
+      opacity: 100%;
+    }
+    
+    .web-page {
+      background-image: url(images/bg2.jpg);
+      background-repeat: no-repeat;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    nav {
+      margin-top: 150px;
+    }
+
+    .navbar, .navbar:hover {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 70px;
+      font-family: fantasy;
+      font-size: 110px;
+    }
+
+    .header1, .header2 {
+      text-shadow: black 0px 0px 10px;
+    }
+
+    .destination {
+      display: grid;
+      width: 100%;
+      margin: 0px 25% 30px;
+      background-color: rgb(248, 248, 242);
+      border-radius: 10px;
+    }
+
+    a {
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-size: 16px;
+      font-weight: 100%;
+      color: rgb(117, 189, 189);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: rgb(117, 189, 189);
+      text-decoration: underline;
+    }
+
+    [class*=nav-] {
+      color: rgba(255, 255, 255, 0.667);
+      transition: 0.15s;
+      font-size: 15px;
+    }
+
+    [class*=nav-]:hover {
+      color: white;
+      text-decoration: underline;
+    }
+
+    .img-header1 {
+      margin-top: 50px;
+      color: black;
+      font-size: 30px;
+      text-align:  left;
+      margin-left: 30px;
+    }
+
+    .img-header2 {
+      margin-top: 50px;
+      color: black;
+      font-size: 30px;
+      text-align: right;
+      margin-right: 20px;
+    }
+
+    img {
+      width: 700px;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .image {
+      max-width: 700px;
+      height: 500px;
+      margin-left: 15px;
+    }
+
+    .web-footer {
+      margin-top: 80px;
+      padding-top: 20px;
+      height: 100px;
+      background-color: rgb(12 17 21);
+    }
+
+    .footer > .footer-text {
+      margin: 5px;
+      width: auto;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.381);
+    }
+
+    button {
+      border: none;
+    }
+
+    .navbar-toggler-icon {
+    color: #dddddd;
+    background-image: url(icon/menu2.png);
+    width: 2em;
+    height: 2em;
+    border: none;
+  }
+
+  .navbar, .navbar:hover {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+
+  .scoll-down {
+    display: flex;
+    width: auto;
+    margin: 0px 200px 0px;
+    background-color: rgb(248, 248, 242);
+    border-radius: 10px;
+  }
+
+  .destination li {
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      width: 690px;
+      font-size: 25px;
+      font-weight: 500;
+      color: black;
+      margin: 25px 15px 0px;
+    }
+
+  .to-do {
+      text-align: left;
+      color: rgba(0, 0, 0, 0.804);
+      margin: 20px 15px 0px;
+      font-family: fantasy;
+      font-size: 30px;
+    }
+
+    @media only screen and  (max-width: 1200px) {
+    body {
+      height: auto;
+      background-color: rgb(240, 240, 240);
+    }
+    nav {
+      margin-top: 130px;
+    }
+
+    div.header {
+      width: 100%;
+      height: 500px;
+      background-color: rgba(0, 0, 0, 0.060);
+      opacity: 100%;
+    }
+    .web-page {
+      background-image: url(images/bg2.jpg);
+      background-repeat: no-repeat;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      }
+
+    h1 {
+      text-align: center;
+      margin-top: 40px;
+      font-family: fantasy;
+      font-size: 70px;
+    }
+
+    .destination {
+      display: grid;
+      width: 100%;
+      margin: 0px 80px 30px;
+      background-color: rgb(248, 248, 242);
+      border-radius: 10px;
+    }
+
+    .scoll-down {
+    display: flex;
+    width: auto;
+    margin: 0px 100px 0px;
+    background-color: rgb(248, 248, 242);
+    border-radius: 10px;
+  }
+
+  .destination li {
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      width: 690px;
+      font-size: 25px;
+      font-weight: 500;
+      color: black;
+      margin: 25px 15px 0px;
+    }
+
+    .to-do {
+      text-align: left;
+      color: rgba(0, 0, 0, 0.804);
+      margin: 20px 15px 0px;
+      font-family: fantasy;
+      font-size: 30px;
+    }
+
+    .image {
+      width: 100%;
+      height: 500px;
+      margin-top: 0;
+      margin-left: 15px;
+    }
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 500px;
+    }
+  }
+
+  @media only screen and  (max-width: 900px) {
+    p, span{
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      width: 90%;
+      font-size: 18px;
+      color: black;
+      text-align: justify;
+    }
+
+    body {
+      height: auto;
+      background-color: rgb(240, 240, 240);
+    }
+    nav {
+      margin-top: 130px;
+    }
+
+    a {
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 16px;
+        font-weight: 100%;
+        color: rgb(117, 189, 189);
+        text-decoration: none;
+      }
+
+    div.header {
+      width: 100%;
+      height: 500px;
+      background-color: rgba(0, 0, 0, 0.060);
+      opacity: 100%;
+    }
+    .web-page {
+      background-image: url(images/bg2.jpg);
+      background-repeat: no-repeat;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      }
+
+    h1 {
+      text-align: center;
+      margin-top: 40px;
+      font-family: fantasy;
+      font-size: 50px;
+    }
+
+    .destination {
+      display: grid;
+      width: 100%;
+      margin: 20px 90px 30px;
+      background-color: rgb(248, 248, 242);
+      border-radius: 10px;
+    }
+
+    .scoll-down {
+    display: flex;
+    width: auto;
+    margin: 0px 70px 0px;
+    background-color: rgb(248, 248, 242);
+    border-radius: 10px;
+  }
+
+  .destination li {
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      width: 80%;
+      font-size: 20px;
+      font-weight: 500;
+      color: black;
+      margin: 25px 0px 0px;
+    }
+
+    .to-do {
+      text-align: left;
+      color: rgba(0, 0, 0, 0.804);
+      margin: 20px 0px 0px;
+      font-family: fantasy;
+      font-size: 20px;
+    }
+
+    .image {
+      width: 96%;
+      height: 400px;
+      margin-top: 0;
+      margin-left: 0px;
+      margin-bottom: 20px;
+    }
+
+    img {
+      object-fit: cover;
+      width: 96%;
+      height: 400px;
+    }
+  }
+
+  @media only screen and  (max-width: 600px) {
+    p, span{
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      width: 80%;
+      font-size: 16px;
+      color: black;
+      text-align: justify;
+      margin: 25px 40px 20px;
+    }
+
+    body {
+      height: auto;
+      background-color: rgb(240, 240, 240);
+    }
+    nav {
+      margin-top: 130px;
+    }
+
+    div.header {
+      width: 100%;
+      height: 500px;
+      background-color: rgba(0, 0, 0, 0.060);
+      opacity: 100%;
+    }
+    .web-page {
+      background-image: url(images/bg2.jpg);
+      background-repeat: no-repeat;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      }
+
+    h1 {
+      text-align: center;
+      margin-top: 40px;
+      font-family: fantasy;
+      font-size: 40px;
+    }
+
+    .destination {
+      display: grid;
+      width: 100%;
+      margin: 0px 20px 30px;
+      background-color: rgb(248, 248, 242);
+      border-radius: 10px;
+    }
+
+    .scoll-down {
+      display: flex;
+      width: 100%;
+      margin: 0px 0px 0px;
+      background-color: rgb(248, 248, 242);
+      border-radius: 10px;
+    }
+
+  .destination li {
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      width: 100%;
+      font-size: 16px;
+      font-weight: 500;
+      color: black;
+      margin: 25px 30px 0px;
+    }
+
+    .to-do {
+      text-align: left;
+      color: rgba(0, 0, 0, 0.804);
+      margin: 20px 35px 0px;
+      font-family: fantasy;
+      font-size: 16px;
+    }
+
+    .image {
+      width: 90%;
+      height: 250px;
+      margin-top: 0;
+      margin-left: 15px;
+    }
+
+    img {
+      object-fit: cover;
+      width: 90%;
+      height: 250px;
+    }
+  }
+</style>
+</head>
+<body>
+  <!-- HERO -->
+  <div class="web-page">
+    <div class="header">
+      <div class="menu">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar" href="#">Camiguin</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Camiguin</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav" >
+                  <li class="nav-item">
+                    <a class="nav-link" href="Home-Page.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Tourist-spots.html">Tourist Spots</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="ThingsToDo.html">Things To Do</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html" style=" color: white;text-decoration: underline;">About Camiguin</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="travel-guide.html">Travel Guide</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <h1 class="header1">About Camiguin</h1>
+    </div>
+  </div>
+
+  <div class="scoll-down">
+    <div class="destination">
+      <div>
+       <p>
+        The name Camiguin is derived from the native word “Kamagong”, a species of the ebony tree.
+        Explorers Ferdinand Magellan and Miguel Lopez de Legaspi landed in Camiguin in 1521 and 1565, respectively. The first Spanish settlement was established in 1598 in what is now Guinsiliban. Guinsiliban which comes from the old Kinamiguin word “Ginsil-ipan” which means “to look out for pirates from a watchtower” has an old Spanish watchtower where the Camiguinons kept watch for Moro pirates.
+       </p>
+       <p>
+        The first major Spanish settlement established in 1679 was called Katagman or Katadman (known as Catarman). The settlement grew and prospered but was destroyed by the eruption of Mt. Vulcan in 1871. The former location is what is now Barangay Bonbon of Catarman
+        On July 4, 1946, the Philippines gained independence from the US. Camiguin was then part of Misamis Oriental. In 1958, it became a sub-province and was made into a separate province on June 18, 1966, and formally inaugurated in 1968.
+       </p>
+      </div>
+      <div class="image">
+        <img src="images/Sunken-Cemetery3.jpg" alt="">
+      </div>
+      <div>
+        <p>
+          The Regional Development Plan recognizes Camiguin’s role as the leading Tourism destination for Northern Mindanao. The Northern Mindanao Development Plan (1993-1998) envisions the region to the south linking resource-rich Mindanao to the rest of the country and the world.
+          Camiguinons prize their cultural heritage. This is reflected by the renewed interested in their traditional arts and crafts. Folk dances such as Spanish Dance, Pandanggo sa Ilaw, and Tinikling, all of which are showcased during annual events such as the Lanzones Festival, have become a major tourist attraction.
+          Camiguin is also famous for its craftworks. Blessed with a natural artistry and abundance of a variety of handicraft materials, the people have long been making baskets, pottery, metal works and other products.
+        </p>
+      </div>
+      <div>
+        <h1 class="to-do">Classical Era</h1>
+        <p>
+          According to their remarkable linguistic similarities, the Manobo people of Surigao del Norte are thought to have been the earliest inhabitants of the island of Camiguin. Before Islamization of the Lanao provinces, the island served as a stopping point for traders from the Rajahnate of Butuan, the Kedatuan of Dapitan, the ancient inhabitants of the Anda peninsula, and maybe the Rajahnate of Cebu and the animist Maranao of Lanao.
+        </p>
+      </div>
+      <div>
+        <h1 class="to-do">Spanish Colonial Era</h1>
+        <p>
+          watchtower in Guinsiliban, which derives from the Kinamiguin phrase “to look out for pirates from a watchtower” (Ginsil-ipan), where the Camiguinons kept watch for Moro pirates.
+          The name Katagman or Katadman refers to the first significant Spanish colony that was founded in 1679. (known as Catarman). The town expanded and thrived until it was obliterated by Mount Vulcan’s 1871 eruption. What is currently Catarman’s Barangay Bonbon was once the former location.
+        </p>
+      </div>
+      <div class="image">
+        <img src="images/top-camiguin-island-tourist-spot.jpg" alt="">
+      </div>
+      <div>
+        <p>
+          Sagay, a town that is south of Catarman, was incorporated in 1848. The name of the lethal fruit trees that flourish there is where the word “Sagay” originates. In 1855, Mambajao became a town. The words mamahaw, which means to usher breakfast, and bajao, which is leftover boiled rice, were combined to create the name. Mambajao flourished and developed into Northern Mindanao’s busiest port in the early 1900s. The municipality of Mahinog was founded in 1860. The word “Mahinog,” which means “to ripen” or “to become ripe,” is a Visayan word. Despite being the island’s oldest village, Guinsiliban didn’t become a municipality until 1950. While Guinsiliban was technically ruled from Sagay, Mahinog was previously ruled by Mambajao.
+        </p>
+        <p>
+          Old Spanish records show that in 1521 and 1565, respectively, the illustrious explorers Ferdinand Magellan and Miguel Lopez de Legaspi arrived in Camiguin. In the area that is now known as Guinsiliban, the first Spanish settlement was founded in 1598.
+        </p>
+      </div>
+      <div>
+        <h1 class="to-do">American Colonial Era</h1>
+        <p>
+          American troops arrived at Camiguin in 1901, in the midst of the Philippine-American War, to take over the island’s political administration. They were engaged in a brief skirmish in Catarman by a party of Camiguinons, led by Valero Camaro, who were armed with bolos and spears. A shot to the forehead killed Valero Camaro. Before he and his band can be acknowledged as patriots in the same manner that we regard the Katipuneros, more research must be done. There is no research that shows Camiguin had an independence movement while under American rule. However, a little fact about the colonial resistance in Cagayan, Misamis, suggests that Camiguinons secretly helped the Cagayanons’ revolutionary efforts against the new colonists.
+        </p>
+      </div>
+      <div>
+        <h1 class="to-do">World War II</h1>
+        <p>
+          On June 18, 1942, the Japanese Imperial Army landed in Camiguin and set up a government in Mambajao. They gutted central Mambajao in reprisal to guerrilla activities in the area. The remains of some of these buildings still exist today.
+        </p>
+      </div>
+      <div>
+        <h1 class="to-do">Independence</h1>
+        <p>
+          On July 4, 1946, the Philippines gained independence from the US. Camiguin was then part of Misamis Oriental. In 1958, it became a sub-province. It was made into a separate province on June 18, 1966, and formally inaugurated in 1968.        </p>
+      </div>  
+    </div>
+  </div>
+  <div class="web-footer">
+    <div class="footer">
+      <p class="footer-text">Copyright © 2024-2025 – All Rights Reserved.</p>
+      <p class="footer-text">Articles in this website may include affiliate links</p>
+    </div>
+  </div>
+</body>
+</html>
